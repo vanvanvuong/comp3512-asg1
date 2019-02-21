@@ -6,11 +6,12 @@
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,800" rel="stylesheet">    
     <link rel="stylesheet" href="css/asg1.css">
+    <link rel="stylesheet" href="css/normalize.css" />
     
 </head>
 <body>
 
-
+<!--Header-->
 <header class="header">
 
   <div class="box a">
@@ -18,35 +19,68 @@
         <h1 class='article-header'>Stock Market Database</h1>
           <subtitle class = 'article-subtitle'>By Van Ellen Vuong </subtitle>
       </nav>
-      <a href="#">
-        <div id = credits-link>
-          <span class="iex">Data provided for free by IEX. View IEX’s Terms of Use</span>
-          <label class = 'article-credits' >Credits</label>
+
+        <div class = 'credits-link' >
+          <label class = 'article-credits'>Credits</label>
+          <span class = 'button'>Data provided for free by <a href = "https://iextrading.com/developer/" id="iex-Link" >IEX</a>. View IEX’s <a href= "https://iextrading.com/api-exhibit-a/" id="iex-term">Terms of Use </a>.</span>
+           
         </div>
-      </a>
   </div>
 </header> 
 
-
+<!--Where all the contents are-->
 <main class="container">  
-  <div class="box b">
-    B  
+  <div class="box b">B  
       <section>
         <h2>List of Stock Corp</h2>
-        <ul id="galleryList"></ul>        
+        
+          <form class=autoBox>
+            <fieldset>
+              <legend>Search by Symbol</legend>
+                <input type="text" class="search" placeholder="Enter here..." list="filterList">
+                <datalist id = "filterList"></datalist>
+            </fieldset>
+          </form>    
+              
+              <table id="compList">
+                <tr>
+                  <th id = "symbol">Symbol</th>
+                  <th id = "companyName">Company Name</th>
+                </tr>
+              </table>        
       </section>  	
   </div>
   
+
   
   <div class="box c">C
     <section>
         <h2>Company Info</h2>  
-        <ul id="paintingList"></ul> 
+          <label>Symbol:</label>
+          <h2 id="sym"></h2>
+          <label>Company Name</label>
+          <span id="compName"></span>          
+          <label>Exchange:</label>
+          <span id="compEx"></span>       
+          <label>Industry:</label>
+          <span id="compIndustry"></span>   
+          <label>Decription</label>
+          <span id="compDesc"></span>            
+          <label>CEO</label>
+          <span id="compCeo"></span>
+          <label>Website</label>
+          <span id="compWeb"></span>
+          <label>Industry Sector</label>
+          <span id="compIS"></span>
+          <label>Tags</label>
+          <span id="compTag"></span>
+        
     </section>  
   </div>
   
   
   <div class="box d">D
+  <button id= viewCharts>View Charts</button>
     <h2>Monthly Stock Data</h2>  
   </div>
   
@@ -61,10 +95,12 @@
 </main>
 
     
-<script src="js/lab10-test02.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCL9ra0_i08skM8AHgig7HefxuVRVG5B5c&callback=initMap"
-    async defer></script>
+<script src="js/asg1.js"></script>
+
 </body>
+<footer>
+     <p id="copyright">Copyright &copy; 2019 Ellen Vuong Web</p>
+   </footer>
 </html>
 
 
