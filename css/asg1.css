@@ -82,7 +82,7 @@ h1 {
 .article-subtitle{
     color: silver;
     font-family: Times;
-    padding-left: 11cm;
+    margin-left: 13cm;
     font-weight: bold;
 }
 
@@ -94,7 +94,7 @@ h1 {
 
 .credits-link {
     padding: 0.5em;
-    background-color: #FF3D00;
+    background-image: url('/images/dark-wood.jpg');
     color: white;
     border: none;
     border-radius: 0.25rem;
@@ -102,12 +102,19 @@ h1 {
 
 /*Hidden text unless it's hovered*/
 span {
-    /*visibility: hidden;*/
+    visibility: hidden;
 }
 
-/*span + #credits-link a:hover {*/
+.article-credits:hover + .button{
+    visibility: visible; 
+    display: block;
+    
+}
+
+/*.article-credits:active + .button:active{*/
 /*    visibility: visible; */
 /*    display: block;*/
+    
 /*}*/
 
 /*Search button*/
