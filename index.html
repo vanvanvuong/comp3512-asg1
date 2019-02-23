@@ -48,7 +48,6 @@
               <table id="compList">
                 <tr>
                   <th id = "symbol">Symbol</th>
-                  <th id = "companyName">Company Name</th>
                 </tr>
               </table>        
       </section>  	
@@ -59,22 +58,24 @@
   <div class="box c">C
     <section>
         <h2>Company Info</h2>  
-          <label>Symbol:</label>
-          <h2 id="sym"></h2>
+          <label>Symbol</label>
+          <h2 id="sym"></h2><br>
           <label>Company Name</label>
-          <span id="compName"></span>          
-          <label>Exchange:</label>
-          <span id="compEx"></span>       
-          <label>Industry:</label>
-          <span id="compIndustry"></span>   
-          <label>Decription</label>
-          <span id="compDesc"></span>            
+          <span id="compName"></span><br>          
+          <label>Exchange</label>
+          <span id="compEx"></span><br>       
+          <label>Industry</label>
+          <span id="compIndustry"></span><br>   
+          <label>Description</label>
+          <span id="compDesc"></span><br>            
           <label>CEO</label>
-          <span id="compCeo"></span>
+          <span id="compCeo"></span><br>
           <label>Website</label>
-          <span id="compWeb"></span>
+          <span id="compWeb"></span><br>
           <label>Industry Sector</label>
-          <span id="compIS"></span>
+          <span id="compIS"></span><br>
+          <label>Sector</label>
+          <span id="compSec"></span><br>
           <label>Tags</label>
           <span id="compTag"></span>
         
@@ -84,15 +85,36 @@
   <!--Should show stock chart based on company clicked from box b-->
   <div class="box d">D
   <button id= viewCharts>View Charts</button>
-    <h2>Monthly Stock Data</h2>  
+    <h2>Month Stock Data</h2> 
+      <table id="monthData">
+          <tr>
+            <th id = "stockDate">Date</th>
+            <th id = "stockOpen">Open</th>
+            <th id = "stockClose">Close</th>
+            <th id = "stockHigh">High</th>
+            <th id = "stockLow">Low</th>
+            <th id = "stockVolume">Volume</th>
+          </tr>
+        </table> 
+    
   </div>
   
     <!--Should show stock quote based on company clicked from box b-->
   <div class="box e">E
       <section>
         <h2>Company Quote</h2>
-          <label> </label>
-                     
+          <label>Open</label>
+          <span id="quoteOpen"></span><br>          
+          <label>Close</label>
+          <span id="quoteClose"></span><br>       
+          <label>High</label>
+          <span id="quoteHigh"></span><br>   
+          <label>Low</label>
+          <span id="quoteLow"></span><br>            
+          <label>Week 52 High</label>
+          <span id="weekHigh"></span><br>
+          <label>Week 52 Low</label>
+          <span id="weekLow"></span>
       </section>  
   </div>
 </main>

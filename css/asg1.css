@@ -101,7 +101,7 @@ h1 {
 }
 
 /*Hidden text unless it's hovered*/
-span {
+span .button {
     visibility: hidden;
 }
 
@@ -138,6 +138,10 @@ button viewCharts {
       
 }
 
+label{
+    font-weight: bold;
+}
+
 
 @media screen and (max-width: 480px) {
     .box {
@@ -150,3 +154,9 @@ button viewCharts {
         width: 48%;
     }
 }
+
+/*#symbol li {*/
+
+/*  background-size: 0.2px 0.2px;*/
+  
+/*}*/
