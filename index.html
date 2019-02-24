@@ -85,7 +85,8 @@
   <!--Should show stock chart based on company clicked from box b-->
   <div class="box d">D
   <button id= viewCharts>View Charts</button>
-    <h2>Month Stock Data</h2> 
+    <h2>Month Stock Data</h2>
+    <tbody id="stockBody">
       <table id="monthData">
           <tr>
             <th id = "stockDate"><a href= "">Date</a></th>
@@ -94,9 +95,9 @@
             <th id = "stockHigh"><a href= "">High</a></th>
             <th id = "stockLow"><a href= "">Low</a></th>
             <th id = "stockVolume"><a href= "">Volume</a></th>
-          </tr>
+         </tr>
         </table> 
-    
+    </tbody>
   </div>
   
     <!--Should show stock quote based on company clicked from box b-->
@@ -114,7 +115,9 @@
           <label>Week 52 High</label>
           <span id="weekHigh"></span><br>
           <label>Week 52 Low</label>
-          <span id="weekLow"></span>
+          <span id="weekLow"></span><br>
+          <label>Latest Source</label>
+          <span id="lateSource"></span>
       </section>  
   </div>
 </main>
