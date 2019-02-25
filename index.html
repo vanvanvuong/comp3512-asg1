@@ -5,7 +5,7 @@
     <title>Comp 3512 Assign1</title>   
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,800" rel="stylesheet">    
-    <link rel="stylesheet" href="css/asg1.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/normalize.css" />
     
 </head>
@@ -20,10 +20,8 @@
           <subtitle class = 'article-subtitle'>By Van Ellen Vuong </subtitle>
       </nav>
 
-        <div class = 'credits-link' >
-          <label class = 'article-credits'>Credits</label>
-          <span class = 'button'>Data provided for free by <a href = "https://iextrading.com/developer/" id="iex-Link" >IEX</a>. View IEX’s <a href= "https://iextrading.com/api-exhibit-a/" id="iex-term">Terms of Use </a>.</span>
-           
+        <div class="tooltip">Credit
+        <label class="tooltiptext">Data provided for free by <a href="https://iextrading.com/developer/">IEX</a>. View IEX's <a href="https://iextrading.com/api-exhibit-a/">Terms of Use</a>.</label>
         </div>
   </div>
 </header> 
@@ -45,11 +43,12 @@
             </fieldset>
           </form>    
               
-              <table id="compList">
+          <table id="compList">
                 <tr>
-                  <th id = "symbol">Symbol</th>
+                  <th id ="sym">Symbol</th>
                 </tr>
-              </table>        
+              </table>
+          
       </section>  	
   </div>
   
@@ -59,7 +58,7 @@
     <section>
         <h2>Company Info</h2>  
           <label>Symbol</label>
-          <h2 id="sym"></h2><br>
+          <span id="sym"></span><br>
           <label>Company Name</label>
           <span id="compName"></span><br>          
           <label>Exchange</label>
@@ -83,21 +82,22 @@
   </div>
   
   <!--Should show stock chart based on company clicked from box b-->
-  <div class="box d">D
-  <button id= viewCharts>View Charts</button>
-    <h2>Month Stock Data</h2>
-    <tbody id="stockBody">
-      <table id="monthData">
-          <tr>
-            <th id = "stockDate"><a href= "">Date</a></th>
-            <th id = "stockOpen"><a href= "">Open</a></th>
-            <th id = "stockClose"><a href= "">Close</a></th>
-            <th id = "stockHigh"><a href= "">High</a></th>
-            <th id = "stockLow"><a href= "">Low</a></th>
-            <th id = "stockVolume"><a href= "">Volume</a></th>
-         </tr>
-        </table> 
-    </tbody>
+ <div class="box d">
+    <section>
+        <h2>Month Stock Data</h2>
+        <button id="chartView">View Charts</button>
+        <table id="stockTable">
+            <tr>
+                <th id="date"><a href="">Date</a></th>
+                <th id="open"><a href="">Open</a></th>
+                <th id="close"><a href="">Close</a></th>
+                <th id="high"><a href="">High</a></th>
+                <th id="low"><a href="">Low</a></th>
+                <th id="volume"><a href="">Volume</a></th>
+            </tr>
+            <tbody id="update"></tbody>
+        </table>
+    </section>
   </div>
   
     <!--Should show stock quote based on company clicked from box b-->
@@ -120,10 +120,42 @@
           <span id="lateSource"></span>
       </section>  
   </div>
+
+<div class="box f">F
+      <section>
+        <h2>Chart View</h2>
+          <label>Company Symbol:</label>
+          <span id="cSymbol"></span>
+          
+          <label>Company Name:</label>
+          <span id="cName"></span>
+          <button type="button" id="speakName">Speak</button><br>
+          
+          <label>Company Description:</label>
+          <span id="cDesc"></span>
+          <button type="button" id="speakDesc">Speak</button><br>
+          
+          <label>Monthly Summary Data</label>
+          <span id="mSumData">
+              
+          <label>Average Close: <span id="avgClose"></span></label>
+
+          <label>Minimum Close: <span id="minClose"></span></label>
+          
+          <label>Average Volume: <span id="avgVolume"></span></label>
+          
+          <label>Total Volume: <span id="totVolume"></span></label>
+          
+          <button type="button" id="close">Close</button>
+      </section>
+  </div>
+
+
+
 </main>
 
     
-<script src="js/asg1.js"></script>
+<script src="js/index.js"></script>
 
 </body>
 <footer>
